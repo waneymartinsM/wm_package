@@ -5,7 +5,7 @@ class WMPackage extends StatefulWidget {
   const WMPackage({
     Key? key,
     this.width,
-    this.height,
+    this.height = 120.0,
     this.color1,
     this.color2,
     this.subtitleColor,
@@ -39,9 +39,9 @@ class _WMPackageState extends State<WMPackage> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.onTap!() ?? () {},
+      onTap: widget.onTap,
       child: Container(
-        width: widget.width ?? MediaQuery.of(context).size.width * 0.90,
+        width: widget.width ?? MediaQuery.of(context).size.width,
         height: widget.height,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -88,7 +88,6 @@ class _WMPackageState extends State<WMPackage> {
                     ),
               ),
             ),
-
           ],
         ),
       ),
