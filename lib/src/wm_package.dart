@@ -5,7 +5,7 @@ class WMPackage extends StatefulWidget {
   const WMPackage({
     Key? key,
     this.width,
-    this.height = 120.0,
+    this.height,
     this.color1,
     this.color2,
     this.subtitleColor,
